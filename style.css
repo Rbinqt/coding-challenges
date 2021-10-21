@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
+::root {
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -18,18 +26,16 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: hsl(224, 23%, 55%);
-    position: relative;
 }
 
 .container {
-    max-width: 350px;
+    max-width: 400px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1), -2px -2px 30px rgba(0, 0, 0, 0.1);;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1), -2px -2px 30px rgba(0, 0, 0, 0.1);
     background: #FFFFFF;
     position: relative;
     overflow: hidden;
@@ -63,11 +69,15 @@ body {
 
 .plan-container {
     width: 100%;
+    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background: hsl(225, 100%, 98%);
+    padding: 0 25px;
+    margin: 10px 0 30px;
+    border-radius: 10px;
 }
 
 #icon-music {
@@ -80,5 +90,59 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5px 15px;
+    padding: 0;
+}
+
+.annual-plan h4, .annual-plan p {
+    padding: 0;
+    margin: 0 10px;
+}
+
+.change-btn {
+    color: hsl(245, 75%, 52%);
+    font-weight: bold;
+}
+
+.change-btn:active {
+    color: hsl(245, 83%, 68%);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.proceed-payment, .cancel-order {
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.proceed-payment {
+    background: hsl(245, 75%, 52%);
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.proceed-payment:active {
+    background: hsl(245, 83%, 68%);
+}
+
+.cancel-order {
+    background: transparent;
+    color: inherit;
+}
+
+.cancel-order:active {
+    color: #000000;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 95%;
+    }
 }
